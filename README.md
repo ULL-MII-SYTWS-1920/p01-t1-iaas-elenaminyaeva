@@ -169,4 +169,93 @@ $ vim package.json
 ```
 ![VIM :SyntasticInfo](/images/vim.png)
 
+11. Install RVM 
+*RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems*
+
+```
+sudo apt-get install software-properties-common
+```
+
+Adding PPA repositories
+```
+sudo apt-add-repository -y ppa:rael-gc/rvm
+```
+```
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install rvm
+```
+
+**Problem**
+```
+Error de GPG: http://dl.google.com/linux/chrome/deb stable InRelease: Las firmas siguientes no se pudieron verificar porque su clave pública no está disponible: NO_PUBKEY 78BD65473CB3BD13
+```
+
+**Solution**
+
+```
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+OK
+```
+
+```
+rvm install ruby
+```
+```
+# ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+```
+
+12. Install NERDTree
+
+```
+git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+```
+Update vimrc
+```
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+```
+![VIM :NERDTree](/images/NERDTree.png)
+
+13. Install Express
+
+```
+# npm -g ls | grep express
+│ ├─┬ express@4.17.1
+│ ├─┬ express-jwt@3.3.0
+│ │ ├── express-unless@0.3.1
+│ ├─┬ express-session@1.13.
+```
+
+14. Install CTAGS
+
+```
+sudo apt-get install ctags
+```
+
+```
+# ctags --version
+Exuberant Ctags 5.9~svn20110310, Copyright (C) 1996-2009 Darren Hiebert
+  Addresses: <dhiebert@users.sourceforge.net>, http://ctags.sourceforge.net
+  Optional compiled features: +wildcards, +regex
+```
+
+15. Install Ag
+*large code searching tool*
+
+```
+brew install ag
+```
+
+```
+/home/linuxbrew/.linuxbrew/Cellar/xz/5.2.5: 128 files, 1.8MB
+==> Installing the_silver_searcher
+==> Pouring the_silver_searcher-2.2.0.x86_64_linux.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+```
+
 
